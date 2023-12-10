@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  ticket-service:
+    image: ticket-service:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=dev
+    # Дополнительные настройки сервиса для окружения dev
+
+  weather-service:
+    image: weather-service:latest
+    ports:
+      - "9000:9000"
+    environment:
+      - ENV=dev
+    # Дополнительные настройки сервиса для окружения dev
