@@ -1,0 +1,17 @@
+version: '3'
+services:
+  tickets-app:
+    build: ./tickets-app
+    ports:
+      - 8000:8000
+    environment:
+      - DATABASE_URL=postgres://user:password@db/tickets_db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=tickets_db
