@@ -31,9 +31,9 @@
 	3. В этих файлах определим переменную окружения ENVIRONMENT со значением, соответствующим текущему окружению (dev, prod, lab).
 	4. Откроем командную строку в каталоге myproject, где находится файл docker-compose.yml.
 	5. Запустим команду docker-compose --env-file .env.{environment} up для запуска сервисов в заданном окружении (замените {environment} на нужное значение: dev, prod или lab). Например:
-**docker-compose --env-file .env.{dev} up**
-**docker-compose --env-file .env.{prod} up**
-**docker-compose --env-file .env.{lab} up**
+	**docker-compose --env-file .env.{dev} up**
+	**docker-compose --env-file .env.{prod} up**
+	**docker-compose --env-file .env.{lab} up**
 
 
 **Задача 2.1**
@@ -45,3 +45,4 @@
 		**docker-compose -f dev.docker-compose.yaml up**
 
 **Задача 2.2**
+	Эта задача похожа на предыдущую и в чём-то аналогична задаче 1.2: мы возьмём проект из задачи 2.1. и расширим его так, чтобы каждый из наших проектов сервисов работал в окружениях lab и dev.
