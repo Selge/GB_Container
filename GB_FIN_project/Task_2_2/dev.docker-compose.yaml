@@ -6,7 +6,6 @@ services:
       - "8000:8000"
     environment:
       - ENV=dev
-    # Дополнительные настройки сервиса для окружения dev
 
   weather-service:
     image: weather-service:latest
@@ -14,4 +13,3 @@ services:
       - "9000:9000"
     environment:
       - ENV=dev
-    # Дополнительные настройки сервиса для окружения dev
